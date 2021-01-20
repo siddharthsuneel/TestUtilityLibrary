@@ -262,7 +262,7 @@ extension UIViewController {
             }
         }
 
-        if includeChildVC, let childVC = childViewControllers.last {
+        if includeChildVC, let childVC = children.last {
             return childVC.topMostVC(includeChildVC: includeChildVC)
         }
 
