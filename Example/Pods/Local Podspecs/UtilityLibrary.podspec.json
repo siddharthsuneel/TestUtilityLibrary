@@ -1,0 +1,22 @@
+{
+  "name": "UtilityLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of UtilityLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/siddharth.suneel@deserve.com/UtilityLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "siddharth.suneel@deserve.com": "siddharth.suneel@deserve.com"
+  },
+  "source": {
+    "git": "https://github.com/siddharth.suneel@deserve.com/UtilityLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "UtilityLibrary/Classes/**/*"
+}

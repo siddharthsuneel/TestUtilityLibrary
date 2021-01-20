@@ -1,0 +1,16 @@
+PODS:
+  - UtilityLibrary (0.1.0)
+
+DEPENDENCIES:
+  - UtilityLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  UtilityLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UtilityLibrary: f7dede3bc646d54b8c87193998d7565c1769bfc1
+
+PODFILE CHECKSUM: 7f1c099d6cf750347a1b99b7c50e979b141ab097
+
+COCOAPODS: 1.9.1

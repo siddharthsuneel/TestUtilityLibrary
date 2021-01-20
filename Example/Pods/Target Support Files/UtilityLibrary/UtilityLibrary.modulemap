@@ -1,0 +1,6 @@
+framework module UtilityLibrary {
+  umbrella header "UtilityLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}
