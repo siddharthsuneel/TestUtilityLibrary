@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
     func condenseWhitespace() -> String {
         let components = self.components(separatedBy: .whitespaces)
         return components.filter { !$0.isEmpty }.joined(separator: " ")
@@ -55,7 +55,7 @@ extension String {
     }
 }
 
-extension Float {
+public extension Float {
     func toInt() -> Int? {
         if self > Float(Int.min) && self < Float(Int.max) {
             return Int(self)
@@ -65,7 +65,7 @@ extension Float {
     }
 }
 
-extension Double {
+public extension Double {
     func roundTo(places: Int) -> Double {
         let divisor = pow(10.0, Double(places))
         return (self * divisor).rounded() / divisor
@@ -87,7 +87,7 @@ extension Double {
     }
 }
 
-extension Int {
+public extension Int {
     var digitCount: Int {
         get {
             return numberOfDigits(in: self)
@@ -103,7 +103,7 @@ extension Int {
     }
 }
 
-extension Date {
+public extension Date {
     var month: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM"
@@ -155,7 +155,7 @@ extension Date {
     }
 }
 
-extension Double {
+public extension Double {
     func string(decimalPlaces: Int = 2) -> String {
         let formatter = NumberFormatter()
         let number = NSNumber(value: self)
@@ -165,14 +165,14 @@ extension Double {
     }
 }
 
-extension Error {
+public extension Error {
     func isNotConnectedToInternet() -> Bool {
         let errorCode = URLError.Code(rawValue: (self as NSError).code)
         return errorCode == .notConnectedToInternet
     }
 }
 
-extension Dictionary {
+public extension Dictionary {
     func jsonString() -> String? {
         let jsonDataOptional = try? JSONSerialization.data(withJSONObject: self, options: [])
         guard let jsonData = jsonDataOptional else { return nil }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIStoryboard {
+public extension UIStoryboard {
     class func vcFactory(_ storyBoardFileName: String,
                          _ storyBoardVCIdenitifier: String) -> UIViewController {
       return UIStoryboard(name: storyBoardFileName,
@@ -16,7 +16,7 @@ extension UIStoryboard {
     }
 }
 
-extension UIColor {
+public extension UIColor {
     convenience init(hex: String) {
         var red: CGFloat = 0.0
         var green: CGFloat = 0.0
@@ -199,7 +199,7 @@ extension UIColor {
     }
 }
 
-extension CGPoint {
+public extension CGPoint {
     func distance(from point: CGPoint) -> CGFloat {
         return hypot(point.x - x, point.y - y)
     }
@@ -212,13 +212,13 @@ extension CGPoint {
     }
 }
 
-extension CGFloat {
+public extension CGFloat {
     static func random(_ maxPoint: CGFloat) -> CGFloat {
         return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * maxPoint
     }
 }
 
-extension UILabel {
+public extension UILabel {
     var actualNumberOfLines: Int {
         let maxSize = CGSize(width: frame.size.width, height: CGFloat(Float.infinity))
         let charSize = font.lineHeight
@@ -243,7 +243,7 @@ extension UILabel {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     // This method will NEVER return VC of type UINavigationController/ UITabBarController/ UIAlertController.
     func topMostVC(includeChildVC: Bool = true) -> UIViewController {
         if let navigationVC = self as? UINavigationController,
